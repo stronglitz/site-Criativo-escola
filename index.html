@@ -16,9 +16,29 @@
             color: #fff;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        header nav a:hover {
+            background-color: #555;
         }
         main {
-            padding: 1rem;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
         }
         .player {
             background-color: #fff;
@@ -26,10 +46,14 @@
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
         .player img {
-            max-width: 100%;
+            max-width: 150px;
             border-radius: 8px;
+            margin-right: 1rem;
         }
         .player h2 {
             margin-top: 0;
@@ -37,16 +61,34 @@
         .stats {
             list-style: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
         }
         .stats li {
             background-color: #eee;
-            margin: 0.5rem 0;
+            margin: 0.5rem;
             padding: 0.5rem;
             border-radius: 4px;
+            flex: 1 1 100px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: sticky;
+            bottom: 0;
         }
         @media (max-width: 600px) {
             .player {
-                padding: 0.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .player img {
+                margin-right: 0;
+                margin-bottom: 1rem;
             }
         }
     </style>
@@ -54,58 +96,78 @@
 <body>
     <header>
         <h1>Melhores Jogadores do Mundo</h1>
+        <nav>
+            <a href="#ronaldo">Cristiano Ronaldo</a>
+            <a href="#neymar">Neymar</a>
+            <a href="#messi">Lionel Messi</a>
+            <a href="#mbappe">Kylian Mbappé</a>
+            <a href="#vinicius">Vinícius Júnior</a>
+        </nav>
     </header>
     <main>
-        <div class="player">
-            <img src="Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis,_September_2023_(cropped).jpg" alt="Cristiano Ronaldo">
-            <h2>Cristiano Ronaldo</h2>
-            <p>Time: Al Nassr</p>
-            <ul class="stats">
-                <li>Gols: 700</li>
-                <li>Assistências: 200</li>
-                <li>Partidas: 1000</li>
-            </ul>
+        <div id="ronaldo" class="player">
+            <img src="Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis,September_2023(cropped).jpg" alt="Cristiano Ronaldo">
+            <div>
+                <h2>Cristiano Ronaldo</h2>
+                <p>Time: Al Nassr</p>
+                <ul class="stats">
+                    <li>Gols: 820</li>
+                    <li>Assistências: 230</li>
+                    <li>Partidas: 1100</li>
+                </ul>
+            </div>
         </div>
-        <div class="player">
-            <img src="Neymar_Jr._with_Al_Hilal,_3_October_2023_-_03_(cropped).jpg" alt="Neymar">
-            <h2>Neymar</h2>
-            <p>Time: Al Hilal</p>
-            <ul class="stats">
-                <li>Gols: 400</li>
-                <li>Assistências: 250</li>
-                <li>Partidas: 600</li>
-            </ul>
+        <div id="neymar" class="player">
+            <img src="Neymar_Jr.with_Al_Hilal,_3_October_2023-03(cropped).jpg" alt="Neymar">
+            <div>
+                <h2>Neymar</h2>
+                <p>Time: Al Hilal</p>
+                <ul class="stats">
+                    <li>Gols: 430</li>
+                    <li>Assistências: 270</li>
+                    <li>Partidas: 630</li>
+                </ul>
+            </div>
         </div>
-        <div class="player">
+        <div id="messi" class="player">
             <img src="download.jpeg" alt="Lionel Messi">
-            <h2>Lionel Messi</h2>
-            <p>Time: Inter Miami</p>
-            <ul class="stats">
-                <li>Gols: 800</li>
-                <li>Assistências: 300</li>
-                <li>Partidas: 950</li>
-            </ul>
+            <div>
+                <h2>Lionel Messi</h2>
+                <p>Time: Inter Miami</p>
+                <ul class="stats">
+                    <li>Gols: 820</li>
+                    <li>Assistências: 350</li>
+                    <li>Partidas: 980</li>
+                </ul>
+            </div>
         </div>
-        <div class="player">
+        <div id="mbappe" class="player">
             <img src="Mbappe Real.jpg.jpg" alt="Kylian Mbappé">
-            <h2>Kylian Mbappé</h2>
-            <p>Time: Paris Saint-Germain</p>
-            <ul class="stats">
-                <li>Gols: 250</li>
-                <li>Assistências: 100</li>
-                <li>Partidas: 300</li>
-            </ul>
+            <div>
+                <h2>Kylian Mbappé</h2>
+                <p>Time: Paris Saint-Germain</p>
+                <ul class="stats">
+                    <li>Gols: 300</li>
+                    <li>Assistências: 120</li>
+                    <li>Partidas: 350</li>
+                </ul>
+            </div>
         </div>
-        <div class="player">
+        <div id="vinicius" class="player">
             <img src="vinicius-junior-osasuna-real-madrid-e1710605342344.jpeg" alt="Vinícius Júnior"> 
-            <h2>Vinícius Júnior</h2>
-            <p>Time: Real Madrid</p>
-            <ul class="stats">
-                <li>Gols: 100</li>
-                <li>Assistências: 80</li>
-                <li>Partidas: 200</li>
-            </ul>
+            <div>
+                <h2>Vinícius Júnior</h2>
+                <p>Time: Real Madrid</p>
+                <ul class="stats">
+                    <li>Gols: 110</li>
+                    <li>Assistências: 90</li>
+                    <li>Partidas: 220</li>
+                </ul>
+            </div>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Site de Futebol. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
