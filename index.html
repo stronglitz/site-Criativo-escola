@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Futebol</title>
+    <title>Melhores Jogadores de Futebol - Kauã Camargo Ribeiro</title>
+    <meta name="description" content="Site com informações atualizadas sobre os melhores jogadores de futebol do mundo, criado por Kauã Camargo Ribeiro.">
+    <meta name="author" content="Kauã Camargo Ribeiro">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e0f7fa;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #00695c;
             color: #fff;
             padding: 1rem;
             text-align: center;
@@ -20,20 +24,27 @@
             top: 0;
             z-index: 1000;
         }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
         header nav {
             display: flex;
             justify-content: center;
             gap: 1rem;
+            margin-top: 0.5rem;
         }
         header nav a {
             color: #fff;
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            background-color: #004d40;
+            transition: background-color 0.3s, transform 0.3s;
         }
         header nav a:hover {
-            background-color: #555;
+            background-color: #00251a;
+            transform: scale(1.05);
         }
         main {
             padding: 2rem 1rem;
@@ -41,22 +52,31 @@
             margin: auto;
         }
         .player {
-            background-color: #fff;
+            background-color: #ffffff;
             margin: 1rem 0;
             padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            transition: transform 0.3s;
+        }
+        .player:hover {
+            transform: scale(1.02);
         }
         .player img {
-            max-width: 150px;
-            border-radius: 8px;
+            max-width: 180px;
+            border-radius: 10px;
             margin-right: 1rem;
+            transition: transform 0.3s;
+        }
+        .player img:hover {
+            transform: scale(1.05);
         }
         .player h2 {
             margin-top: 0;
+            font-size: 1.8rem;
         }
         .stats {
             list-style: none;
@@ -66,20 +86,32 @@
             flex-wrap: wrap;
         }
         .stats li {
-            background-color: #eee;
+            background-color: #b2dfdb;
             margin: 0.5rem;
             padding: 0.5rem;
             border-radius: 4px;
-            flex: 1 1 100px;
+            flex: 1 1 120px;
             text-align: center;
+            font-size: 1rem;
+        }
+        .news {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+        .news h3 {
+            margin-top: 0;
         }
         footer {
-            background-color: #333;
+            background-color: #004d40;
             color: #fff;
             text-align: center;
             padding: 1rem;
             position: sticky;
             bottom: 0;
+            margin-top: 2rem;
         }
         @media (max-width: 600px) {
             .player {
@@ -95,18 +127,19 @@
 </head>
 <body>
     <header>
-        <h1>Melhores Jogadores do Mundo</h1>
+        <h1>Melhores Jogadores de Futebol</h1>
         <nav>
             <a href="#ronaldo">Cristiano Ronaldo</a>
             <a href="#neymar">Neymar</a>
             <a href="#messi">Lionel Messi</a>
             <a href="#mbappe">Kylian Mbappé</a>
             <a href="#vinicius">Vinícius Júnior</a>
+            <a href="#news">Notícias</a>
         </nav>
     </header>
     <main>
         <div id="ronaldo" class="player">
-            <img src="Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis,_September_2023_(cropped).jpg" alt="Cristiano Ronaldo">
+            <img src="https://example.com/images/cristiano-ronaldo.jpg" alt="Cristiano Ronaldo">
             <div>
                 <h2>Cristiano Ronaldo</h2>
                 <p>Time: Al Nassr</p>
@@ -114,11 +147,13 @@
                     <li>Gols: 820</li>
                     <li>Assistências: 230</li>
                     <li>Partidas: 1100</li>
+                    <li>Temporadas: 20+</li>
+                    <li>Títulos: 34</li>
                 </ul>
             </div>
         </div>
         <div id="neymar" class="player">
-            <img src="Neymar_Jr._with_Al_Hilal,_3_October_2023_-_03_(cropped).jpg" alt="Neymar">
+            <img src="https://example.com/images/neymar.jpg" alt="Neymar">
             <div>
                 <h2>Neymar</h2>
                 <p>Time: Al Hilal</p>
@@ -126,11 +161,13 @@
                     <li>Gols: 430</li>
                     <li>Assistências: 270</li>
                     <li>Partidas: 630</li>
+                    <li>Temporadas: 15</li>
+                    <li>Títulos: 25</li>
                 </ul>
             </div>
         </div>
         <div id="messi" class="player">
-            <img src="download.jpeg" alt="Lionel Messi">
+            <img src="https://example.com/images/lionel-messi.jpg" alt="Lionel Messi">
             <div>
                 <h2>Lionel Messi</h2>
                 <p>Time: Inter Miami</p>
@@ -138,11 +175,13 @@
                     <li>Gols: 820</li>
                     <li>Assistências: 350</li>
                     <li>Partidas: 980</li>
+                    <li>Temporadas: 22</li>
+                    <li>Títulos: 38</li>
                 </ul>
             </div>
         </div>
         <div id="mbappe" class="player">
-            <img src="Mbappe Real.jpg.jpg" alt="Kylian Mbappé">
+            <img src="https://example.com/images/kylian-mbappe.jpg" alt="Kylian Mbappé">
             <div>
                 <h2>Kylian Mbappé</h2>
                 <p>Time: Paris Saint-Germain</p>
@@ -150,11 +189,13 @@
                     <li>Gols: 300</li>
                     <li>Assistências: 120</li>
                     <li>Partidas: 350</li>
+                    <li>Temporadas: 10</li>
+                    <li>Títulos: 10</li>
                 </ul>
             </div>
         </div>
         <div id="vinicius" class="player">
-            <img src="vinicius-junior-osasuna-real-madrid-e1710605342344.jpeg" alt="Vinícius Júnior"> 
+            <img src="https://example.com/images/vinicius-junior.jpg" alt="Vinícius Júnior"> 
             <div>
                 <h2>Vinícius Júnior</h2>
                 <p>Time: Real Madrid</p>
@@ -162,12 +203,17 @@
                     <li>Gols: 110</li>
                     <li>Assistências: 90</li>
                     <li>Partidas: 220</li>
+                    <li>Temporadas: 7</li>
+                    <li>Títulos: 8</li>
                 </ul>
             </div>
         </div>
+        <div id="news" class="news">
+            <h3>Últimas Notícias</h3>
+            <p><strong>Notícia 1:</strong> Cristiano Ronaldo quebra novo recorde de gols em ligas internacionais.</p>
+            <p><strong>Notícia 2:</strong> Neymar e Messi se enfrentam em um amistoso de alto nível.</p>
+            <p><strong>Notícia 3:</strong> Mbappé e Vinícius Júnior mostram grande forma na temporada atual.</p>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Site de Futebol. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2024 Site de Futebol. Todos
