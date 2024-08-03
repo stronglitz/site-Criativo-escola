@@ -33,6 +33,7 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 0.5rem;
+            flex-wrap: wrap;
         }
         header nav a {
             color: #fff;
@@ -51,7 +52,7 @@
             max-width: 1200px;
             margin: auto;
         }
-        .player {
+        .player, .legend {
             background-color: #ffffff;
             margin: 1rem 0;
             padding: 1rem;
@@ -62,19 +63,19 @@
             align-items: center;
             transition: transform 0.3s;
         }
-        .player:hover {
+        .player:hover, .legend:hover {
             transform: scale(1.02);
         }
-        .player img {
+        .player img, .legend img {
             max-width: 180px;
             border-radius: 10px;
             margin-right: 1rem;
             transition: transform 0.3s;
         }
-        .player img:hover {
+        .player img:hover, .legend img:hover {
             transform: scale(1.05);
         }
-        .player h2 {
+        .player h2, .legend h2 {
             margin-top: 0;
             font-size: 1.8rem;
         }
@@ -114,11 +115,11 @@
             margin-top: 2rem;
         }
         @media (max-width: 600px) {
-            .player {
+            .player, .legend {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .player img {
+            .player img, .legend img {
                 margin-right: 0;
                 margin-bottom: 1rem;
             }
@@ -139,6 +140,7 @@
             <a href="#bellingham">Jude Bellingham</a>
             <a href="#pedri">Pedri</a>
             <a href="#news">Notícias</a>
+            <a href="#legends">Lendas</a>
         </nav>
     </header>
     <main>
@@ -171,7 +173,7 @@
             </div>
         </div>
         <div id="messi" class="player">
-            <img src="download.jpeg" alt="Lionel Messi">
+            <img src="messi.jpeg" alt="Lionel Messi">
             <div>
                 <h2>Lionel Messi</h2>
                 <p>Time: Inter Miami</p>
@@ -270,12 +272,149 @@
         </div>
         <div id="news" class="news">
             <h3>Últimas Notícias</h3>
-            <p><strong>Notícia 1:</strong> Cristiano Ronaldo quebra novo recorde de gols em ligas internacionais.</p>
-            <p><strong>Notícia 2:</strong> Neymar e Messi se enfrentam em um amistoso de alto nível.</p>
-            <p><strong>Notícia 3:</strong> Mbappé e Vinícius Júnior mostram grande forma na temporada atual.</p>
-            <p><strong>Notícia 4:</strong> Haaland marca hat-trick em vitória do Manchester City.</p>
-            <p><strong>Notícia 5:</strong> De Bruyne lidera assistências na Premier League.</p>
-            <p><strong>Notícia 6:</strong> Bellingham e Pedri brilham em suas respectivas ligas.</p>
+            <p><strong>Notícia 1:</strong> Cristiano Ronaldo ultrapassa a marca de 900 gols em clubes e seleções, consolidando-se como o maior artilheiro da história.</p>
+            <p><strong>Notícia 2:</strong> Neymar brilha no Campeonato Saudita com uma atuação espetacular, ajudando o Al Hilal a conquistar mais uma vitória importante.</p>
+            <p><strong>Notícia 3:</strong> Messi continua a deslumbrar com sua habilidade no Inter Miami, liderando a equipe em assistências e gols.</p>
+            <p><strong>Notícia 4:</strong> Mbappé se destaca na La Liga com um hat-trick, mostrando que a sua transferência para o Real Madrid foi um sucesso.</p>
+            <p><strong>Notícia 5:</strong> Vinícius Júnior é eleito Jogador do Mês na La Liga, após uma série de atuações brilhantes.</p>
+            <p><strong>Notícia 6:</strong> Haaland confirma sua forma estonteante com dois gols na vitória do Manchester City na Supercopa Inglesa.</p>
+            <p><strong>Notícia 7:</strong> Kevin De Bruyne se aproxima do recorde de assistências na Premier League, com performances consistentes ao longo da temporada.</p>
+            <p><strong>Notícia 8:</strong> Jude Bellingham é o destaque da temporada no Real Madrid, atraindo olhares de clubes ao redor do mundo.</p>
+            <p><strong>Notícia 9:</strong> Pedri continua a ser um dos jovens talentos mais promissores da FC Barcelona, ajudando a equipe em competições locais e internacionais.</p>
+        </div>
+        <div id="legends" class="legend">
+            <h3>Lendas do Futebol</h3>
+            <div class="player">
+                <img src="pelé.png" alt="Pelé">
+                <div>
+                    <h2>Pelé 👑</h2>
+                    <ul class="stats">
+                        <li>Gols: 1281</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 1363</li>
+                        <li>Temporadas: 21</li>
+                        <li>Títulos: 32</li>
+                        <li>Rei Do Futebol👑</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="maradona.png" alt="Diego Maradona">
+                <div>
+                    <h2>Diego Maradona</h2>
+                    <ul class="stats">
+                        <li>Gols: 345</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 688</li>
+                        <li>Temporadas: 21</li>
+                        <li>Títulos: 15</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="cruyff.png" alt="Johan Cruyff">
+                <div>
+                    <h2>Johan Cruyff</h2>
+                    <ul class="stats">
+                        <li>Gols: 327</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 704</li>
+                        <li>Temporadas: 20</li>
+                        <li>Títulos: 18</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="zidane.png" alt="Zinedine Zidane">
+                <div>
+                    <h2>Zinedine Zidane</h2>
+                    <ul class="stats">
+                        <li>Gols: 126</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 735</li>
+                        <li>Temporadas: 18</li>
+                        <li>Títulos: 14</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="ronaldinho.png" alt="Ronaldinho Gaúcho">
+                <div>
+                    <h2>Ronaldinho Gaúcho</h2>
+                    <ul class="stats">
+                        <li>Gols: 266</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 759</li>
+                        <li>Temporadas: 17</li>
+                        <li>Títulos: 17</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="george.png" alt="George Best">
+                <div>
+                    <h2>George Best</h2>
+                    <ul class="stats">
+                        <li>Gols: 179</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 474</li>
+                        <li>Temporadas: 18</li>
+                        <li>Títulos: 11</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="becnbauer.png" alt="Franz Beckenbauer">
+                <div>
+                    <h2>Franz Beckenbauer</h2>
+                    <ul class="stats">
+                        <li>Gols: 60</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 700</li>
+                        <li>Temporadas: 20</li>
+                        <li>Títulos: 17</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="scholes.png" alt="Paul Scholes">
+                <div>
+                    <h2>Paul Scholes</h2>
+                    <ul class="stats">
+                        <li>Gols: 150</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 718</li>
+                        <li>Temporadas: 20</li>
+                        <li>Títulos: 25</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="fenomeno.png" alt="Ronaldo Fenômeno">
+                <div>
+                    <h2>Ronaldo Fenômeno</h2>
+                    <ul class="stats">
+                        <li>Gols: 352</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 518</li>
+                        <li>Temporadas: 16</li>
+                        <li>Títulos: 20</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player">
+                <img src="eusebio.png" alt="Eusébio">
+                <div>
+                    <h2>Eusébio</h2>
+                    <ul class="stats">
+                        <li>Gols: 733</li>
+                        <li>Assistências: N/A</li>
+                        <li>Partidas: 745</li>
+                        <li>Temporadas: 22</li>
+                        <li>Títulos: 14</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
